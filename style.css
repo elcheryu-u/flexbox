@@ -60,7 +60,8 @@ label{
 }
 
 
-.axis.row svg{
+.axis.row svg,
+.axis.row-reverse .cross-axis svg{
   transform: rotate(0)
 }
 
@@ -68,16 +69,18 @@ label{
   transform: rotate(90deg)
 }
 
-.axis.column .cross-axis svg{
-  transform: rotate(270deg)
-}
-
 .axis.row-reverse svg{
   transform: rotate(180deg)
 }
 
-.axis.column-reverse svg{
+.axis.column-reverse svg,
+.axis.column .cross-axis svg{
   transform: rotate(270deg)
+}
+
+.axis.column ~ .navbar,
+.axis.column-reverse ~ .navbar {
+  min-height: 25rem
 }
 
 .navbar {
@@ -91,7 +94,7 @@ label{
   background-color: #222;
   padding: 1rem;
   border-radius: 10px;
-  min-height: 6rem;
+  min-height: 8rem;
   gap: 1rem; /* Añade espacio entre los ítems */
   transition: all 0.5s ease; /* Aunque no animará justify, ayuda con otras props */
 }

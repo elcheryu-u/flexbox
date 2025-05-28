@@ -106,8 +106,8 @@
     // Función para actualizar el párrafo con los valores actuales
     function updateCurrentValues() {
       const direction = navbar.style.flexDirection || "row";
-      const justify = navbar.style.justifyContent || "flex-start";
-      const align = navbar.style.alignItems || "stretch";
+      const justify = navbar.style.justifyContent || "center";
+      const align = navbar.style.alignItems || "center";
 
       currentValuesParagraph.textContent = `Dirección: ${direction} | Justificación: ${justify} | Alineación: ${align}`;
     }
